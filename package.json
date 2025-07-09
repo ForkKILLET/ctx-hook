@@ -1,0 +1,41 @@
+{
+  "name": "ctx-hook",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A TypeScript library for property hooking within functions.",
+  "engines": {
+    "node": ">=13.10.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "author": "ForkKILLET <fork_killet@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForkKILLET/ctx-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ForkKILLET/ctx-hook/issues"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.10.5",
+    "@types/node": "^22.16.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
