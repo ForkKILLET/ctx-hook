@@ -49,3 +49,18 @@ it('time travel', () => {
   expect(date0.getTime()).not.toBe(0)
 })
 
+it('hook with store', () => {
+  const object = {
+    foo: 'bar',
+  }
+  const { wrap, dispose } = useCtxHook(object)
+    ('foo', (original, store: number) => original + store)
+
+  const getFoo42 = wrap(() => object.foo, 42)
+  const getFoo37 = wrap(() => object.foo, 37)
+
+  expect(object.foo).toBe('bar')
+  expect(getFoo42()).toBe('bar42')
+  expect(getFoo37()).toBe('bar37')
+  dispose()
+})
