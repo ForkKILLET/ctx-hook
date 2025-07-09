@@ -1,5 +1,7 @@
 # ctx-hook
 
+[![npm](https://img.shields.io/npm/v/ctx-hook?style=flat-square)](https://www.npmjs.com/package/ctx-hook)
+
 ## Overview
 `ctx-hook` is a TypeScript library that uses Node.js's [asynchronous context tracking](https://nodejs.org/api/async_context.html) to enable property hooking that activates only within the asynchronous contexts of wrapper functions created by its API.
 
